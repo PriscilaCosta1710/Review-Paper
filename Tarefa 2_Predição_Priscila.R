@@ -253,17 +253,17 @@ mean.cv.errors=apply(cv.errors,2,mean)
 mean.cv.errors
 
 par(mfrow=c(1,1))
-plot(mean.cv.errors, xlab="Número de variáveis", ylab="Erro Quadrático Médio (MSE)", type='b')
+plot(mean.cv.errors, xlab="Número de variáveis", ylab="Erro Médio Quadrático (MSE)", type='b')
 
 reg.best=regsubsets(medv~., data=treino, nvmax=13)
-coef(reg.best,11)
+coef(reg.best,10)
 
-#Menor MSE obtido para o modelo de 11 atributos
+#Menor MSE obtido para o modelo de 10 atributos
 
 #### Letra D####
 
 #Agora, vamos avaliar o desempenho dos modelos no conjunto de teste
-#Podemos usar a métrica de erro quadrático médio (MSE) para comparar o desempenho preditivo dos modelos
+#Podemos usar a métrica de Erro Médio Quadrático (MSE) para comparar o desempenho preditivo dos modelos
 #Vamos calcular o MSE para cada modelo no conjunto de teste e comparar os resultados
 
 #Para o modelo obtido na letra a
